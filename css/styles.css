@@ -1,0 +1,167 @@
+body {
+  background: #87ceeb;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#container {
+  width: 375px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.msg {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+#turn {
+  text-align: center;
+  margin: 0 0 0 5px;
+  transition: 0.8s;
+}
+
+.change {
+  transform: rotateY(360deg);
+}
+
+.rule {
+  font-size: 18px;
+  clear: both;
+  text-align: center;
+  color: #ffffff;
+}
+
+.rule ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.rule li {
+  flex: 1;
+}
+
+#youLabel {
+  float: left;
+  margin: 0 5px 0 5px;
+}
+
+#you {
+  display: block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #D81159;
+}
+
+#cpuLabel {
+  float: right;
+  margin: 0 5px 0 0;
+}
+
+#cpu {
+  float: right;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #3B413C;
+}
+
+#mycanvas {
+  background: #ffffff;
+  padding: 5px;
+  transition: 0.4s;
+}
+
+#stage {
+  font-size: 20px;
+}
+
+#dice {
+  background: #f06543;
+  color: #fff;
+  height: 40px;
+  border-radius: 20px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  user-select: none;
+}
+
+#dice.inactive {
+  cursor: default;
+  opacity: 0.4;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 14px;
+}
+
+#dice.pressed {
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 14px;
+}
+
+#stage {
+  display: flex;
+}
+
+#stepsLeft {
+  margin-top: 15px;
+  text-align: left;
+  color: #ffffff;
+  float: left;
+}
+
+#stepsCount {
+  color: #ffffff;
+  margin-top: 15px;
+  float: left;
+  transition: 0.4s;
+  font-size: 24px;
+}
+
+#stage:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+#mask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#modal {
+  background: #ffffff;
+  font-size: 24px;
+  width: 375px;
+  padding: 20px;
+  border-radius: 4px;
+  text-align: center;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: 0.4s;
+  z-index: 2;
+}
+
+#mask.hidden {
+  display: none;
+}
+
+#modal.hidden {
+  transform: translate(0, -500px);
+}

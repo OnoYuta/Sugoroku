@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>すごろく</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="msg">
+      <p id="turn">あなたのターン</p>
+      <div id="youLabel">YOU:</div>
+      <span id="you"></span> <span id="cpu"></span>
+      <div id="cpuLabel">CPU:</div>
+    </div>
+    <div class="rule">
+      <ul>
+        <li>NORMAL:<font color="#ffffff" size="6">□</font></li>
+        <li>SHUFFLE:<font color="#bbd8b3" size="6">■</font></li>
+        <li>TELEPORT:<font color="#ffc0cb" size="6">■</font></li>
+      </ul>
+    </div>
+    <canvas width="375" height="375" id="mycanvas">
+      Canvasに対応したブラウザを用意してください。
+    </canvas>
+    <div id="stage">
+      <div id="stepsLeft">残りのステップ数：</div>
+      <div id="stepsCount" class="change">0</div>
+    </div>
+    <div id="dice">サイコロをふる</div>
+  </div>
+  <div id="mask" class="hidden"></div>
+  <section id="modal" class="hidden">modal</section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
